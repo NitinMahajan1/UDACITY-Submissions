@@ -11786,7 +11786,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -11878,7 +11878,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -12075,7 +12075,7 @@ height=250
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">normalize</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
@@ -12130,7 +12130,7 @@ height=250
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">one_hot_encode</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
@@ -12196,7 +12196,7 @@ height=250
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12223,7 +12223,7 @@ height=250
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12280,7 +12280,7 @@ height=250
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
@@ -12302,7 +12302,7 @@ height=250
 <span class="sd">    : return: Tensor for label input.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># TODO: Implement Function</span>
-    <span class="k">return</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">n_classes</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">)</span> 
+    <span class="k">return</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">int32</span><span class="p">,</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">n_classes</span><span class="p">),</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">)</span> 
 
 
 <span class="k">def</span> <span class="nf">neural_net_keep_prob_input</span><span class="p">():</span>
@@ -12372,7 +12372,7 @@ Keep Prob Tests Passed.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">conv2d_maxpool</span><span class="p">(</span><span class="n">x_tensor</span><span class="p">,</span> <span class="n">conv_num_outputs</span><span class="p">,</span> <span class="n">conv_ksize</span><span class="p">,</span> <span class="n">conv_strides</span><span class="p">,</span> <span class="n">pool_ksize</span><span class="p">,</span> <span class="n">pool_strides</span><span class="p">):</span>
@@ -12390,17 +12390,19 @@ Keep Prob Tests Passed.
     <span class="n">input_channel_depth</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">x_tensor</span><span class="o">.</span><span class="n">get_shape</span><span class="p">()[</span><span class="mi">3</span><span class="p">])</span>
     <span class="n">filter_size_height</span> <span class="o">=</span> <span class="n">conv_ksize</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">filter_size_width</span> <span class="o">=</span> <span class="n">conv_ksize</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-    <span class="n">filter_weights</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal</span><span class="p">((</span><span class="n">filter_size_height</span><span class="p">,</span><span class="n">filter_size_width</span><span class="p">,</span><span class="n">input_channel_depth</span><span class="p">,</span><span class="n">conv_num_outputs</span><span class="p">)))</span>
+    <span class="n">filter_weights</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal</span><span class="p">((</span><span class="n">filter_size_height</span><span class="p">,</span><span class="n">filter_size_width</span><span class="p">,</span><span class="n">input_channel_depth</span><span class="p">,</span><span class="n">conv_num_outputs</span><span class="p">),</span><span class="n">stddev</span><span class="o">=</span><span class="mf">0.05</span><span class="p">))</span>
     <span class="n">filter_bias</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">conv_num_outputs</span><span class="p">))</span>
     <span class="n">conv</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">conv2d</span><span class="p">(</span><span class="n">x_tensor</span><span class="p">,</span>
                         <span class="n">filter_weights</span><span class="p">,</span>
                         <span class="n">strides</span> <span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="o">*</span><span class="n">conv_strides</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="p">,</span>
                         <span class="n">padding</span> <span class="o">=</span><span class="s1">&#39;SAME&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">filter_bias</span>
-    <span class="n">conv</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="n">conv</span><span class="p">)</span>
+    
     <span class="n">conv</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">max_pool</span><span class="p">(</span><span class="n">conv</span><span class="p">,</span>
                   <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="o">*</span><span class="n">pool_ksize</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
                   <span class="n">strides</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="o">*</span><span class="n">pool_strides</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
                   <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;SAME&#39;</span><span class="p">)</span>
+    
+    <span class="n">conv</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="n">conv</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">conv</span> 
 
@@ -12445,7 +12447,7 @@ Keep Prob Tests Passed.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">flatten</span><span class="p">(</span><span class="n">x_tensor</span><span class="p">):</span>
@@ -12499,7 +12501,7 @@ Keep Prob Tests Passed.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[71]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">fully_conn</span><span class="p">(</span><span class="n">x_tensor</span><span class="p">,</span> <span class="n">num_outputs</span><span class="p">):</span>
@@ -12553,7 +12555,7 @@ Keep Prob Tests Passed.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">output</span><span class="p">(</span><span class="n">x_tensor</span><span class="p">,</span> <span class="n">num_outputs</span><span class="p">):</span>
@@ -12614,7 +12616,7 @@ Keep Prob Tests Passed.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">conv_net</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">keep_prob</span><span class="p">):</span>
@@ -12629,15 +12631,15 @@ Keep Prob Tests Passed.
     <span class="c1"># Function Definition from Above:</span>
     <span class="c1">#    conv2d_maxpool(x_tensor, conv_num_outputs, conv_ksize, conv_strides, pool_ksize, pool_strides)</span>
     <span class="n">conv_num_outputs</span> <span class="o">=</span> <span class="mi">10</span>
-    <span class="n">conv_ksize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-    <span class="n">conv_strides</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">conv_ksize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+    <span class="n">conv_strides</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
     <span class="n">pool_ksize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
     <span class="n">pool_strides</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
     <span class="n">num_outputs</span> <span class="o">=</span> <span class="mi">10</span>
     
-    <span class="n">conv</span> <span class="o">=</span> <span class="n">conv2d_maxpool</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">conv_num_outputs</span><span class="p">,</span> <span class="n">conv_ksize</span><span class="p">,</span> <span class="n">conv_strides</span><span class="p">,</span> <span class="n">pool_ksize</span><span class="p">,</span> <span class="n">pool_strides</span><span class="p">)</span>
-    <span class="n">conv</span> <span class="o">=</span> <span class="n">conv2d_maxpool</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">conv_num_outputs</span><span class="p">,</span> <span class="n">conv_ksize</span><span class="p">,</span> <span class="n">conv_strides</span><span class="p">,</span> <span class="n">pool_ksize</span><span class="p">,</span> <span class="n">pool_strides</span><span class="p">)</span>
-    <span class="n">conv</span> <span class="o">=</span> <span class="n">conv2d_maxpool</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">conv_num_outputs</span><span class="p">,</span> <span class="n">conv_ksize</span><span class="p">,</span> <span class="n">conv_strides</span><span class="p">,</span> <span class="n">pool_ksize</span><span class="p">,</span> <span class="n">pool_strides</span><span class="p">)</span>
+    <span class="n">conv</span> <span class="o">=</span> <span class="n">conv2d_maxpool</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span> <span class="n">conv_strides</span><span class="p">,</span> <span class="n">pool_ksize</span><span class="p">,</span> <span class="n">pool_strides</span><span class="p">)</span>
+    <span class="n">conv</span> <span class="o">=</span> <span class="n">conv2d_maxpool</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="n">conv_strides</span><span class="p">,</span> <span class="n">pool_ksize</span><span class="p">,</span> <span class="n">pool_strides</span><span class="p">)</span>
+    <span class="n">conv</span> <span class="o">=</span> <span class="n">conv2d_maxpool</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="n">conv_strides</span><span class="p">,</span> <span class="n">pool_ksize</span><span class="p">,</span> <span class="n">pool_strides</span><span class="p">)</span>
 
     
     
@@ -12651,9 +12653,11 @@ Keep Prob Tests Passed.
     <span class="c1">#    Play around with different number of outputs</span>
     <span class="c1"># Function Definition from Above:</span>
     <span class="c1">#   fully_conn(x_tensor, num_outputs)</span>
-    <span class="n">conv</span> <span class="o">=</span> <span class="n">fully_conn</span><span class="p">(</span><span class="n">conv</span><span class="p">,</span> <span class="n">num_outputs</span><span class="p">)</span>
-    <span class="n">conv</span> <span class="o">=</span> <span class="n">fully_conn</span><span class="p">(</span><span class="n">conv</span><span class="p">,</span> <span class="n">num_outputs</span><span class="p">)</span>
-    <span class="n">conv</span> <span class="o">=</span> <span class="n">fully_conn</span><span class="p">(</span><span class="n">conv</span><span class="p">,</span> <span class="n">num_outputs</span><span class="p">)</span>
+    <span class="n">conv</span> <span class="o">=</span> <span class="n">fully_conn</span><span class="p">(</span><span class="n">conv</span><span class="p">,</span> <span class="mi">512</span><span class="p">)</span>
+    <span class="n">conv</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">dropout</span><span class="p">(</span><span class="n">conv</span><span class="p">,</span> <span class="n">keep_prob</span><span class="p">)</span>
+    <span class="n">conv</span> <span class="o">=</span> <span class="n">fully_conn</span><span class="p">(</span><span class="n">conv</span><span class="p">,</span> <span class="mi">256</span><span class="p">)</span>
+    <span class="n">conv</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">dropout</span><span class="p">(</span><span class="n">conv</span><span class="p">,</span> <span class="n">keep_prob</span><span class="p">)</span>
+    <span class="n">conv</span> <span class="o">=</span> <span class="n">fully_conn</span><span class="p">(</span><span class="n">conv</span><span class="p">,</span> <span class="mi">128</span><span class="p">)</span>
     
     <span class="c1"># TODO: Apply an Output Layer</span>
     <span class="c1">#    Set this to the number of classes</span>
@@ -12738,7 +12742,7 @@ Keep Prob Tests Passed.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">train_neural_network</span><span class="p">(</span><span class="n">session</span><span class="p">,</span> <span class="n">optimizer</span><span class="p">,</span> <span class="n">keep_probability</span><span class="p">,</span> <span class="n">feature_batch</span><span class="p">,</span> <span class="n">label_batch</span><span class="p">):</span>
@@ -12793,7 +12797,7 @@ Keep Prob Tests Passed.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_stats</span><span class="p">(</span><span class="n">session</span><span class="p">,</span> <span class="n">feature_batch</span><span class="p">,</span> <span class="n">label_batch</span><span class="p">,</span> <span class="n">cost</span><span class="p">,</span> <span class="n">accuracy</span><span class="p">):</span>
@@ -12809,8 +12813,8 @@ Keep Prob Tests Passed.
     
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
     
-    <span class="n">feed_dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="p">:</span> <span class="n">feature_batch</span><span class="p">,</span>
-                       <span class="n">y</span><span class="p">:</span> <span class="n">label_batch</span><span class="p">,</span>
+    <span class="n">feed_dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="p">:</span> <span class="n">valid_features</span><span class="p">,</span>
+                       <span class="n">y</span><span class="p">:</span> <span class="n">valid_labels</span><span class="p">,</span>
                       <span class="n">keep_prob</span><span class="p">:</span><span class="mf">1.0</span><span class="p">}</span>
     <span class="n">cost</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">cost</span><span class="p">,</span> <span class="n">feed_dict</span><span class="o">=</span><span class="n">feed_dict</span><span class="p">)</span>
         
@@ -12847,13 +12851,13 @@ Keep Prob Tests Passed.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Tune Parameters</span>
 <span class="n">epochs</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">256</span>
-<span class="n">keep_probability</span> <span class="o">=</span> <span class="mf">0.2</span>
+<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">128</span>
+<span class="n">keep_probability</span> <span class="o">=</span> <span class="mf">0.6</span>
 </pre></div>
 
 </div>
@@ -12873,7 +12877,7 @@ Keep Prob Tests Passed.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[77]:</div>
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12907,305 +12911,305 @@ Keep Prob Tests Passed.
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Checking the Training on a Single Batch...
 Epoch  1, CIFAR-10 Batch 1:  
-cost:2.2885632514953613
-acc:0.10000000149011612
+cost:1.9217523336410522
+acc:0.28619998693466187
 Epoch  2, CIFAR-10 Batch 1:  
-cost:2.260423421859741
-acc:0.15000000596046448
+cost:1.6152729988098145
+acc:0.4050000011920929
 Epoch  3, CIFAR-10 Batch 1:  
-cost:2.2514171600341797
-acc:0.20000001788139343
+cost:1.4541161060333252
+acc:0.4599999487400055
 Epoch  4, CIFAR-10 Batch 1:  
-cost:2.2350962162017822
-acc:0.17500001192092896
+cost:1.4024162292480469
+acc:0.4901999533176422
 Epoch  5, CIFAR-10 Batch 1:  
-cost:2.1878743171691895
-acc:0.30000001192092896
+cost:1.3502848148345947
+acc:0.5205999612808228
 Epoch  6, CIFAR-10 Batch 1:  
-cost:2.1145923137664795
-acc:0.32500001788139343
+cost:1.3606812953948975
+acc:0.5217999219894409
 Epoch  7, CIFAR-10 Batch 1:  
-cost:2.043686866760254
-acc:0.3500000238418579
+cost:1.3694721460342407
+acc:0.5339999794960022
 Epoch  8, CIFAR-10 Batch 1:  
-cost:1.9551187753677368
-acc:0.3500000238418579
+cost:1.3496423959732056
+acc:0.5365999341011047
 Epoch  9, CIFAR-10 Batch 1:  
-cost:1.8602718114852905
-acc:0.375
+cost:1.2609140872955322
+acc:0.5679999589920044
 Epoch 10, CIFAR-10 Batch 1:  
-cost:1.7722439765930176
-acc:0.3499999940395355
+cost:1.3729349374771118
+acc:0.549799919128418
 Epoch 11, CIFAR-10 Batch 1:  
-cost:1.698986530303955
-acc:0.4000000059604645
+cost:1.3819814920425415
+acc:0.5645999312400818
 Epoch 12, CIFAR-10 Batch 1:  
-cost:1.6418145895004272
-acc:0.5
+cost:1.5404330492019653
+acc:0.5409998893737793
 Epoch 13, CIFAR-10 Batch 1:  
-cost:1.5882610082626343
-acc:0.5
+cost:1.4647178649902344
+acc:0.5557999610900879
 Epoch 14, CIFAR-10 Batch 1:  
-cost:1.5371936559677124
-acc:0.5
+cost:1.5638713836669922
+acc:0.5539999008178711
 Epoch 15, CIFAR-10 Batch 1:  
-cost:1.4828429222106934
-acc:0.5000000596046448
+cost:1.6600388288497925
+acc:0.543199896812439
 Epoch 16, CIFAR-10 Batch 1:  
-cost:1.4422767162322998
-acc:0.550000011920929
+cost:1.7341399192810059
+acc:0.540399968624115
 Epoch 17, CIFAR-10 Batch 1:  
-cost:1.402374267578125
-acc:0.574999988079071
+cost:1.6926732063293457
+acc:0.5567998886108398
 Epoch 18, CIFAR-10 Batch 1:  
-cost:1.3689062595367432
-acc:0.550000011920929
+cost:1.8019497394561768
+acc:0.5496000051498413
 Epoch 19, CIFAR-10 Batch 1:  
-cost:1.3296482563018799
-acc:0.550000011920929
+cost:1.7552770376205444
+acc:0.5495999455451965
 Epoch 20, CIFAR-10 Batch 1:  
-cost:1.2885417938232422
-acc:0.574999988079071
+cost:1.8469517230987549
+acc:0.5513999462127686
 Epoch 21, CIFAR-10 Batch 1:  
-cost:1.2603561878204346
-acc:0.6000000238418579
+cost:1.9125306606292725
+acc:0.550599992275238
 Epoch 22, CIFAR-10 Batch 1:  
-cost:1.248692512512207
-acc:0.574999988079071
+cost:1.9238231182098389
+acc:0.5593999028205872
 Epoch 23, CIFAR-10 Batch 1:  
-cost:1.2137092351913452
-acc:0.550000011920929
+cost:1.9860661029815674
+acc:0.5437999367713928
 Epoch 24, CIFAR-10 Batch 1:  
-cost:1.2022510766983032
-acc:0.550000011920929
+cost:2.0338821411132812
+acc:0.543199896812439
 Epoch 25, CIFAR-10 Batch 1:  
-cost:1.182121992111206
-acc:0.550000011920929
+cost:2.1192688941955566
+acc:0.5411999225616455
 Epoch 26, CIFAR-10 Batch 1:  
-cost:1.1650348901748657
-acc:0.550000011920929
+cost:2.13783597946167
+acc:0.5397999286651611
 Epoch 27, CIFAR-10 Batch 1:  
-cost:1.1474204063415527
-acc:0.550000011920929
+cost:2.0084640979766846
+acc:0.5415999293327332
 Epoch 28, CIFAR-10 Batch 1:  
-cost:1.127742052078247
-acc:0.550000011920929
+cost:2.117064952850342
+acc:0.5437999367713928
 Epoch 29, CIFAR-10 Batch 1:  
-cost:1.108727216720581
-acc:0.574999988079071
+cost:2.084848165512085
+acc:0.5515999794006348
 Epoch 30, CIFAR-10 Batch 1:  
-cost:1.0968375205993652
-acc:0.574999988079071
+cost:2.00616455078125
+acc:0.5501999258995056
 Epoch 31, CIFAR-10 Batch 1:  
-cost:1.0798221826553345
-acc:0.574999988079071
+cost:2.104487895965576
+acc:0.5553999543190002
 Epoch 32, CIFAR-10 Batch 1:  
-cost:1.0653544664382935
-acc:0.574999988079071
+cost:2.0671420097351074
+acc:0.5607999563217163
 Epoch 33, CIFAR-10 Batch 1:  
-cost:1.049523115158081
-acc:0.6000000238418579
+cost:2.2558417320251465
+acc:0.5513999462127686
 Epoch 34, CIFAR-10 Batch 1:  
-cost:1.0308377742767334
-acc:0.625
+cost:2.249584913253784
+acc:0.5519999265670776
 Epoch 35, CIFAR-10 Batch 1:  
-cost:1.0186749696731567
-acc:0.625
+cost:2.2892966270446777
+acc:0.5477999448776245
 Epoch 36, CIFAR-10 Batch 1:  
-cost:1.0093793869018555
-acc:0.625
+cost:2.276855707168579
+acc:0.5485999584197998
 Epoch 37, CIFAR-10 Batch 1:  
-cost:0.999541699886322
-acc:0.625
+cost:2.3033862113952637
+acc:0.5359999537467957
 Epoch 38, CIFAR-10 Batch 1:  
-cost:0.9923443794250488
-acc:0.625
+cost:2.2865121364593506
+acc:0.5531999468803406
 Epoch 39, CIFAR-10 Batch 1:  
-cost:0.9892606139183044
-acc:0.625
+cost:2.445094347000122
+acc:0.547999918460846
 Epoch 40, CIFAR-10 Batch 1:  
-cost:0.9794265031814575
-acc:0.625
+cost:2.363718032836914
+acc:0.5503999590873718
 Epoch 41, CIFAR-10 Batch 1:  
-cost:0.9761688709259033
-acc:0.625
+cost:2.5565178394317627
+acc:0.5375999212265015
 Epoch 42, CIFAR-10 Batch 1:  
-cost:0.9631954431533813
-acc:0.625
+cost:2.4297537803649902
+acc:0.5461999177932739
 Epoch 43, CIFAR-10 Batch 1:  
-cost:0.9536930322647095
-acc:0.6499999761581421
+cost:2.4693915843963623
+acc:0.5491999387741089
 Epoch 44, CIFAR-10 Batch 1:  
-cost:0.9501563310623169
-acc:0.6499999761581421
+cost:2.5664961338043213
+acc:0.5477999448776245
 Epoch 45, CIFAR-10 Batch 1:  
-cost:0.9382462501525879
-acc:0.6749999523162842
+cost:2.370647668838501
+acc:0.5453999042510986
 Epoch 46, CIFAR-10 Batch 1:  
-cost:0.9294919371604919
-acc:0.6499999761581421
+cost:2.5108306407928467
+acc:0.5475999116897583
 Epoch 47, CIFAR-10 Batch 1:  
-cost:0.9175581336021423
-acc:0.6499999761581421
+cost:2.6032474040985107
+acc:0.5371999740600586
 Epoch 48, CIFAR-10 Batch 1:  
-cost:0.9067318439483643
-acc:0.6749999523162842
+cost:2.5786843299865723
+acc:0.5459999442100525
 Epoch 49, CIFAR-10 Batch 1:  
-cost:0.9069000482559204
-acc:0.625
+cost:2.659776449203491
+acc:0.5299999713897705
 Epoch 50, CIFAR-10 Batch 1:  
-cost:0.9041203856468201
-acc:0.625
+cost:2.478752374649048
+acc:0.5423999428749084
 Epoch 51, CIFAR-10 Batch 1:  
-cost:0.9040625095367432
-acc:0.625
+cost:2.353470802307129
+acc:0.5527999401092529
 Epoch 52, CIFAR-10 Batch 1:  
-cost:0.9001758098602295
-acc:0.6749999523162842
+cost:2.5776560306549072
+acc:0.5443999171257019
 Epoch 53, CIFAR-10 Batch 1:  
-cost:0.9034103155136108
-acc:0.6749999523162842
+cost:2.5785622596740723
+acc:0.5415999293327332
 Epoch 54, CIFAR-10 Batch 1:  
-cost:0.9051907658576965
-acc:0.6749999523162842
+cost:2.589046001434326
+acc:0.5507999658584595
 Epoch 55, CIFAR-10 Batch 1:  
-cost:0.9011332988739014
-acc:0.6749999523162842
+cost:2.5076217651367188
+acc:0.5487999320030212
 Epoch 56, CIFAR-10 Batch 1:  
-cost:0.9007014036178589
-acc:0.6749999523162842
+cost:2.420233726501465
+acc:0.5555999279022217
 Epoch 57, CIFAR-10 Batch 1:  
-cost:0.9023754000663757
-acc:0.6749999523162842
+cost:2.6568832397460938
+acc:0.5481999516487122
 Epoch 58, CIFAR-10 Batch 1:  
-cost:0.9002151489257812
-acc:0.6749999523162842
+cost:2.7488038539886475
+acc:0.539199948310852
 Epoch 59, CIFAR-10 Batch 1:  
-cost:0.8957374095916748
-acc:0.6749999523162842
+cost:2.621943712234497
+acc:0.5593999624252319
 Epoch 60, CIFAR-10 Batch 1:  
-cost:0.888778567314148
-acc:0.6499999761581421
+cost:2.5430514812469482
+acc:0.5392000079154968
 Epoch 61, CIFAR-10 Batch 1:  
-cost:0.8808427453041077
-acc:0.6749999523162842
+cost:2.54921555519104
+acc:0.5461999177932739
 Epoch 62, CIFAR-10 Batch 1:  
-cost:0.8776284456253052
-acc:0.6749999523162842
+cost:2.625263214111328
+acc:0.5465999245643616
 Epoch 63, CIFAR-10 Batch 1:  
-cost:0.8788657784461975
-acc:0.6499999761581421
+cost:2.7132809162139893
+acc:0.5405998826026917
 Epoch 64, CIFAR-10 Batch 1:  
-cost:0.8749419450759888
-acc:0.6499999761581421
+cost:2.7981696128845215
+acc:0.5339999198913574
 Epoch 65, CIFAR-10 Batch 1:  
-cost:0.8754097819328308
-acc:0.6499999761581421
+cost:2.6523168087005615
+acc:0.5381999015808105
 Epoch 66, CIFAR-10 Batch 1:  
-cost:0.8716204166412354
-acc:0.6749999523162842
+cost:2.6653664112091064
+acc:0.5389999747276306
 Epoch 67, CIFAR-10 Batch 1:  
-cost:0.8706416487693787
-acc:0.6749999523162842
+cost:2.583245277404785
+acc:0.5467999577522278
 Epoch 68, CIFAR-10 Batch 1:  
-cost:0.864823043346405
-acc:0.6499999761581421
+cost:2.663391590118408
+acc:0.5423999428749084
 Epoch 69, CIFAR-10 Batch 1:  
-cost:0.8552715182304382
-acc:0.675000011920929
+cost:2.671790599822998
+acc:0.5446000099182129
 Epoch 70, CIFAR-10 Batch 1:  
-cost:0.84879070520401
-acc:0.675000011920929
+cost:2.6440324783325195
+acc:0.5507999658584595
 Epoch 71, CIFAR-10 Batch 1:  
-cost:0.846441388130188
-acc:0.675000011920929
+cost:2.61430025100708
+acc:0.5547999143600464
 Epoch 72, CIFAR-10 Batch 1:  
-cost:0.850493848323822
-acc:0.6499999761581421
+cost:2.8306057453155518
+acc:0.5447999835014343
 Epoch 73, CIFAR-10 Batch 1:  
-cost:0.8468130826950073
-acc:0.675000011920929
+cost:2.6285030841827393
+acc:0.5475999116897583
 Epoch 74, CIFAR-10 Batch 1:  
-cost:0.8399896621704102
-acc:0.699999988079071
+cost:2.674839973449707
+acc:0.5363999009132385
 Epoch 75, CIFAR-10 Batch 1:  
-cost:0.8317840099334717
-acc:0.7249999642372131
+cost:2.6705267429351807
+acc:0.5431999564170837
 Epoch 76, CIFAR-10 Batch 1:  
-cost:0.8322451114654541
-acc:0.7249999642372131
+cost:2.6523728370666504
+acc:0.5463999509811401
 Epoch 77, CIFAR-10 Batch 1:  
-cost:0.8278611898422241
-acc:0.7249999642372131
+cost:2.7808964252471924
+acc:0.5311999320983887
 Epoch 78, CIFAR-10 Batch 1:  
-cost:0.8227790594100952
-acc:0.7249999642372131
+cost:2.6586124897003174
+acc:0.550399899482727
 Epoch 79, CIFAR-10 Batch 1:  
-cost:0.8195330500602722
-acc:0.7249999642372131
+cost:2.658109188079834
+acc:0.5459999442100525
 Epoch 80, CIFAR-10 Batch 1:  
-cost:0.813351035118103
-acc:0.699999988079071
+cost:2.7676374912261963
+acc:0.5443998575210571
 Epoch 81, CIFAR-10 Batch 1:  
-cost:0.8115658760070801
-acc:0.699999988079071
+cost:2.6969239711761475
+acc:0.5557999610900879
 Epoch 82, CIFAR-10 Batch 1:  
-cost:0.8053619861602783
-acc:0.7249999642372131
+cost:2.683034658432007
+acc:0.5453999638557434
 Epoch 83, CIFAR-10 Batch 1:  
-cost:0.8037226796150208
-acc:0.699999988079071
+cost:2.8281965255737305
+acc:0.5433999300003052
 Epoch 84, CIFAR-10 Batch 1:  
-cost:0.7996763586997986
-acc:0.699999988079071
+cost:2.7809860706329346
+acc:0.5523999929428101
 Epoch 85, CIFAR-10 Batch 1:  
-cost:0.7935118675231934
-acc:0.699999988079071
+cost:2.6136646270751953
+acc:0.5485999584197998
 Epoch 86, CIFAR-10 Batch 1:  
-cost:0.7901253700256348
-acc:0.699999988079071
+cost:2.7965426445007324
+acc:0.55159991979599
 Epoch 87, CIFAR-10 Batch 1:  
-cost:0.7879500389099121
-acc:0.699999988079071
+cost:2.7247676849365234
+acc:0.5443999767303467
 Epoch 88, CIFAR-10 Batch 1:  
-cost:0.7841788530349731
-acc:0.699999988079071
+cost:2.7045114040374756
+acc:0.5525999069213867
 Epoch 89, CIFAR-10 Batch 1:  
-cost:0.7799801826477051
-acc:0.699999988079071
+cost:2.8012635707855225
+acc:0.5437999367713928
 Epoch 90, CIFAR-10 Batch 1:  
-cost:0.7773525714874268
-acc:0.699999988079071
+cost:2.7456488609313965
+acc:0.549799919128418
 Epoch 91, CIFAR-10 Batch 1:  
-cost:0.7732410430908203
-acc:0.699999988079071
+cost:2.926569700241089
+acc:0.5485999584197998
 Epoch 92, CIFAR-10 Batch 1:  
-cost:0.7675737142562866
-acc:0.699999988079071
+cost:2.843503952026367
+acc:0.5503999590873718
 Epoch 93, CIFAR-10 Batch 1:  
-cost:0.7644424438476562
-acc:0.699999988079071
+cost:2.7199766635894775
+acc:0.531999945640564
 Epoch 94, CIFAR-10 Batch 1:  
-cost:0.7616779804229736
-acc:0.699999988079071
+cost:2.667508602142334
+acc:0.5483999252319336
 Epoch 95, CIFAR-10 Batch 1:  
-cost:0.7580040693283081
-acc:0.699999988079071
+cost:2.7777023315429688
+acc:0.5461999177932739
 Epoch 96, CIFAR-10 Batch 1:  
-cost:0.7554718255996704
-acc:0.699999988079071
+cost:2.890472173690796
+acc:0.5423999428749084
 Epoch 97, CIFAR-10 Batch 1:  
-cost:0.7518953084945679
-acc:0.699999988079071
+cost:2.7338719367980957
+acc:0.5395999550819397
 Epoch 98, CIFAR-10 Batch 1:  
-cost:0.7468834519386292
-acc:0.7249999642372131
+cost:2.832979917526245
+acc:0.533799946308136
 Epoch 99, CIFAR-10 Batch 1:  
-cost:0.7433914542198181
-acc:0.75
+cost:2.6800622940063477
+acc:0.540399968624115
 Epoch 100, CIFAR-10 Batch 1:  
-cost:0.7449739575386047
-acc:0.7249999642372131
+cost:2.6669442653656006
+acc:0.5471999049186707
 </pre>
 </div>
 </div>
