@@ -131,7 +131,6 @@ class Simulator(object):
             if not testing:
                 if total_trials > 20: # Must complete minimum 20 training trials
                     if a.learning:
-                        print(a.epsilon)
                         if a.epsilon < tolerance: # assumes epsilon decays to 0
                             testing = True
                             trial = 1
@@ -184,7 +183,7 @@ class Simulator(object):
                         self.last_updated = self.current_time
                     
                     # Render text
-                        self.render_text(trial, testing)
+                    self.render_text(trial, testing)
 
                     # Render GUI and sleep
                     if self.display:
