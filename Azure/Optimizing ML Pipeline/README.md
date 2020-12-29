@@ -31,30 +31,23 @@ Scikit-learn pipeline architecture can be described as below -
 
 ## AutoML
 
-AutoML generated a number of models with the best model as MaxAbsScaler LightGBM with an accuracy of 0.9150
+AutoML generated a number of models with the best model as VotingEnsemble with an accuracy of 0.9175. The model is an ensemble of various LightGBM and XGBOOSTClassifiers. 
 
-TBA
 
 ## Pipeline comparison
 The results of the primary metric i.e. Accuracy are pretty close:
 
 Hyperdrive Accuracy: 0.9115
-AutoMl Accuravy: 0.9150
+AutoMl Accuravy: 0.9175
 
 Even though in this use case there was not a huge difference in results but there's a lot of difference between the two piplines.
 
 Creating the model with Auto ML meant only specifying the configuration of the Auto ML and there is no work required to be done for data cleaning, feaure engineering, hyper paramtere selection & tunining or model selection. AutoML reduces the amount of effort and brought out model with ease.
 
 ## Future work
-**What are some areas of improvement for future experiments? Why might these improvements help the model?**
 
 Below are some suggestions for further improving the experiments - 
 
 - Balancing the data - Balancing the data with up or downsampling will help in datset balancing and improved model performance.
 - Metrics - Review further and use suitable metrics such as precion/recall, F1 score. Since this is an unbalaced dataset - confusion matrix would be very helpful
 - Feature slection - Apply some domain expertise and keep only desired features. Feature slection using feature correlation and feature importance would help in reducing unecssary features.
-
-
-```
-
-```
